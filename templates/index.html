@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Underground Tracking System</title>
+  
+  <script src="https://cdn.socket.io/4.5.0/socket.io.min.js"></script>
+
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<h1>🚗 Underground Tracking System</h1>
+
+<!-- STRUCTURE MAP -->
+<div class="map">
+<strong>
+  <div class="node">START</div></strong>
+
+  <div class="line">
+    <div id="fillLine" class="fill"></div>
+  </div>
+
+  <strong><div class="node" id="cp1">CP1</div></strong>
+
+  <div class="line">
+    <div id="fillLine2" class="fill"></div>
+  </div>
+
+  <strong><div class="node" id="cp2">CP2</div></strong>
+
+  <div class="line">
+    <div id="fillLine3" class="fill"></div> <!-- ✅ FIX -->
+  </div>
+
+  <strong><div class="node" id="end">END</div></strong>
+
+</div>
+
+<!-- INFO PANEL -->
+ <div class="panel-container">
+<div class="panel">
+  <strong><p>Distance: <span id="dist">0</span> m</p></strong>
+  <strong><p>Status: <span id="status">Waiting...</span></p></strong>
+</div>
+<div class="panel">
+  <strong><p>Bin Status: <span id="binlevel">Waiting...</span> </p></strong>
+</div>
+<div class="panel">
+  <strong><p>Battery Status: <span id="battery">Waiting...</span></p></strong>
+</div>
+<script src="/static/script.js"></script>
+</div>
+<canvas id="xGraph" width="700" height="200"></canvas>
+
+</body>
+</html>
+
